@@ -56,3 +56,8 @@ define hook-stop
 > end
 ```
 The ```hook-stop``` will be executed after running, continuing, stepping into or going to the next instruction. These commands can in general be used to examine what effect user input has on the stack i.e. an buffer overflow attack. Increasing the number values of ```x/8wx``` will display more of the stack.
+
+Looking at single registers can be done using ``ìnfo registers```.
+```
+i r $eax
+``` 
