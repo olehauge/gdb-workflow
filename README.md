@@ -40,3 +40,7 @@ Check the reigsters at this break point.
 ```
 info registers
 ```
+We can print strings stored at addresses by using ```x/s```.
+```
+x/s <some address from register>
+```
