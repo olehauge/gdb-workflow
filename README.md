@@ -26,3 +26,17 @@ ni
 ```
 We use ```ni``` here to step over/through function calls, while si would step into the function calls. This way we can follow the main function and not follow stuff like ```puts``` i.e. 
 The command can be repeated by hitting enter. 
+
+Depending on what we are debugging we might want to set break points at other addresses, before running the program again with user input. We might have located them in our control graph.
+```
+break *<some address>
+run
+```
+Go forward to the next break point. ```continue``` will run the program until the next break point.
+```
+continue
+```
+Check the reigsters at this break point.
+```
+info registers
+```
