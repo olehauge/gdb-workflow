@@ -44,3 +44,12 @@ We can print strings stored at addresses by using ```x/s```.
 ```
 x/s <some address from register>
 ```
+## Making things easier/cleaner
+We can have GDB display e.g. the current instruction that will be executed next and examine the stack at that point.
+```
+define hook-stop
+> x/1i $eip
+> x/8wx $esp
+> end
+```
+The ```hook-stop``` will be executed after running, continuing, stepping into or going to the next instruction. These commands can in general be used to examine what effect user input has on the stack i.e. an buffer overflow attack. Increasing the number values of ```x/8wx``` will display more of the stack.
