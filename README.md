@@ -1,4 +1,7 @@
-# General GDB workflow
+# GDB workflow
+This document is meant as a short workflow reminder for debugging with GBD.
+
+## General workflow
 Set disassembler flavor to Intel.
 ```
 set disassembly-flavor intel 
