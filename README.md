@@ -47,6 +47,12 @@ We can print strings stored at addresses by using ```x/s```.
 ```
 x/s <some address from register>
 ```
+We can print integer values stored on the stach using ```x/wd```.
+```
+x/wd $rbp-0x30
+0x7ffd79b151c0:	12345678
+```
+
 ## Making things easier/cleaner
 We can have GDB display e.g. the current instruction that will be executed next and examine the stack at that point.
 ```
